@@ -25,9 +25,10 @@
     "powerfactor": 1.00,
     //设备状态
     "analysis": {
-        "charger": "on",
-        "soldering": "up",
-        "powersupply": "off"
+        "charger": 0,
+        "soldering": 2,
+        "lamp": 1,
+        "unknown": 0
     }
 }
 ```

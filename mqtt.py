@@ -55,7 +55,7 @@ def MQTT_listen(topic, msgstr):
 
 def MQTT_save_into_db(dev):
     print(dev)
-    db.update_all(dev['uuid'], dev['local'], dev['state'], dev['vlotage'], dev['current'], dev['apower'], dev['aelectricity'], dev['powerfactor'], str(dev['analysis']), dev['user']['name'], dev['user']['id'])
+    db.update_all(dev['uuid'], dev['local'], dev['state'], round(dev['vlotage'], 2), round(dev['current'], 4), round(dev['apower'], 4), round(dev['aelectricity'], 4), round(dev['powerfactor'], 4), str(dev['analysis']), dev['user']['name'], dev['user']['id'])
 
 
 def MQTT_publish(topic, msg, qoslevel):
